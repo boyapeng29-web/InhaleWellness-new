@@ -11,12 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* ========================================
-           🎨 极简奢华美学 - FLEUR风格（改进版）
-           ======================================== */
-        
         :root {
-            /* 配色系统 - 柔和大地色 */
             --color-bg-primary: #F0E5DB;           
             --color-bg-secondary: #E8D5C4;         
             --color-text-primary: #3D3029;         
@@ -24,12 +19,10 @@
             --color-accent: #C8A882;               
             --color-white: #FFFFFF;
             
-            /* 字体系统 */
             --font-display: 'Playfair Display', serif;
             --font-body: 'Montserrat', sans-serif;
             --font-elegant: 'Cormorant Garamond', serif;
             
-            /* 间距 */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
@@ -38,7 +31,6 @@
             --space-2xl: 4rem;
             --space-3xl: 6rem;
             
-            /* 过渡 */
             --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -61,9 +53,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ----------------
-           导航栏 - 极简透明
-           ---------------- */
         .nav {
             position: fixed;
             top: 0;
@@ -162,9 +151,6 @@
             color: var(--color-text-primary);
         }
 
-        /* ----------------
-           Hero 区域 - 全屏背景
-           ---------------- */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -283,9 +269,6 @@
             50% { transform: translateX(-50%) translateY(10px); }
         }
 
-        /* ----------------
-           按钮系统 - 改进1：添加圆角
-           ---------------- */
         .btn {
             font-family: var(--font-body);
             font-size: 0.85rem;
@@ -322,9 +305,6 @@
             color: var(--color-white);
         }
 
-        /* ----------------
-           功能卡片区域 - 圆形卡片
-           ---------------- */
         .services-section {
             padding: var(--space-3xl) var(--space-xl);
             background: var(--color-bg-secondary);
@@ -353,7 +333,6 @@
             letter-spacing: 0.02em;
         }
 
-        /* 改进3：网格布局 - 最后两个居中 */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -362,7 +341,6 @@
             margin: 0 auto;
         }
 
-        /* 让第4和第5个卡片居中 */
         .service-card:nth-child(4) {
             grid-column: 1 / 2;
             margin: 0 auto;
@@ -385,7 +363,6 @@
             transform: translateY(-10px);
         }
 
-        /* 改进2：圆形图片容器 - 支持真实图片 */
         .service-image {
             width: 100%;
             aspect-ratio: 1;
@@ -396,7 +373,6 @@
             background: linear-gradient(135deg, #D4C4B0 0%, #E8D5C4 100%);
         }
 
-        /* 如果有图片，隐藏装饰层 */
         .service-image.has-image::before {
             display: none;
         }
@@ -413,7 +389,6 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
-        /* 真实图片样式 */
         .service-image img {
             width: 100%;
             height: 100%;
@@ -421,7 +396,6 @@
             display: block;
         }
 
-        /* 图标（占位符） */
         .service-icon {
             position: absolute;
             top: 50%;
@@ -431,7 +405,6 @@
             z-index: 1;
         }
 
-        /* 当有图片时隐藏图标 */
         .service-image.has-image .service-icon {
             display: none;
         }
@@ -472,7 +445,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* 改进1：圆角按钮样式 */
         .service-link {
             font-family: var(--font-body);
             font-size: 0.75rem;
@@ -481,18 +453,15 @@
             text-transform: uppercase;
             color: var(--color-text-primary);
             text-decoration: none;
-            
-            /* 改成圆角按钮样式 */
             display: inline-block;
             padding: 0.75rem 2rem;
             border: 1px solid var(--color-text-primary);
-            border-radius: 25px; /* 圆角！ */
+            border-radius: 25px;
             transition: all var(--transition);
             position: relative;
             overflow: hidden;
         }
 
-        /* 按钮悬停效果 */
         .service-link::before {
             content: '';
             position: absolute;
@@ -514,9 +483,6 @@
             border-color: var(--color-text-primary);
         }
 
-        /* ----------------
-           子页面容器
-           ---------------- */
         .page-container {
             display: none;
             min-height: 100vh;
@@ -587,9 +553,6 @@
             color: var(--color-text-secondary);
         }
 
-        /* ----------------
-           响应式设计
-           ---------------- */
         @media (max-width: 1024px) {
             .nav {
                 padding: 1.5rem 2rem;
@@ -604,7 +567,6 @@
                 gap: 2rem;
             }
 
-            /* 在中等屏幕上，第5个卡片横跨两列居中 */
             .service-card:nth-child(4) {
                 grid-column: auto;
                 margin: 0;
@@ -658,9 +620,6 @@
             }
         }
 
-        /* ----------------
-           装载动画
-           ---------------- */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -685,7 +644,6 @@
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="nav" id="navbar">
         <button class="nav-logo" onclick="location.reload()">WELLNESS</button>
         
@@ -703,9 +661,7 @@
         </div>
     </nav>
 
-    <!-- 首页 -->
     <div class="page-container active" id="home-page">
-        <!-- Hero 区域 -->
         <section class="hero">
             <div class="hero-decoration shape-1"></div>
             <div class="hero-decoration shape-2"></div>
@@ -715,7 +671,7 @@
                 <h1 class="fade-in-up delay-2">Your Wellness Journey</h1>
                 <p class="hero-subtitle fade-in-up delay-3">
                     从运动到营养，从身体到心灵<br>
-                    一个平台,全面提升你的生活质量
+                    一个平台，全面提升你的生活质量
                 </p>
                 <button class="btn fade-in-up delay-4" onclick="document.querySelector('.services-section').scrollIntoView({ behavior: 'smooth' })">
                     探索功能
@@ -734,7 +690,6 @@
             </div>
         </section>
 
-        <!-- 功能卡片区域 -->
         <section class="services-section">
             <div class="section-header">
                 <p class="section-label">THIS IS WHAT WE OFFER</p>
@@ -742,10 +697,9 @@
             </div>
 
             <div class="services-grid">
-                <!-- 1. 运动库 -->
                 <div class="service-card" onclick="showPage('movement')">
                     <div class="service-image has-image">
-                        <img src="images/movement.jpg" alt="Movement Library">
+                        <img src="./images/movement.jpg" alt="Movement Library" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
                         <div>
@@ -759,10 +713,9 @@
                     </div>
                 </div>
 
-                <!-- 2. 训练记录 -->
                 <div class="service-card" onclick="showPage('workout')">
                     <div class="service-image has-image">
-                        <img src="images/workout.jpg" alt="Workout Log">
+                        <img src="./images/workout.jpg" alt="Workout Log" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
                         <div>
@@ -776,10 +729,9 @@
                     </div>
                 </div>
 
-                <!-- 3. 每日课程 -->
                 <div class="service-card" onclick="showPage('lesson')">
                     <div class="service-image has-image">
-                        <img src="images/lesson.jpg" alt="Daily Lesson">
+                        <img src="./images/lesson.jpg" alt="Daily Lesson" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
                         <div>
@@ -793,10 +745,9 @@
                     </div>
                 </div>
 
-                <!-- 4. 香氛 -->
                 <div class="service-card" onclick="showPage('scent')">
                     <div class="service-image has-image">
-                        <img src="images/scent.jpg" alt="Scent & Soul">
+                        <img src="./images/scent.jpg" alt="Scent & Soul" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
                         <div>
@@ -810,10 +761,9 @@
                     </div>
                 </div>
 
-                <!-- 5. 食谱 -->
                 <div class="service-card" onclick="showPage('recipe')">
                     <div class="service-image has-image">
-                        <img src="images/recipe.jpg" alt="Recipes">
+                        <img src="./images/recipe.jpg" alt="Recipes" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
                         <div>
@@ -827,75 +777,75 @@
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-                <!-- 子页面 -->
-                <div class="page-container" id="movement-page">
-                    <div class="subpage-header">
-                        <button class="back-button" onclick="location.reload()">← 返回首页</button>
-                        <div class="subpage-content">
-                            <h1>Movement Library</h1>
-                            <p>按部位浏览训练动作，掌握正确姿势与力量技巧</p>
-                        </div>
-                    </div>
-                    <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
-                        <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载训练动作... 🏋️</p>
-                    </div>
-                </div>
+    <div class="page-container" id="movement-page">
+        <div class="subpage-header">
+            <button class="back-button" onclick="location.reload()">← 返回首页</button>
+            <div class="subpage-content">
+                <h1>Movement Library</h1>
+                <p>按部位浏览训练动作，掌握正确姿势与力量技巧</p>
+            </div>
+        </div>
+        <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
+            <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载训练动作... 🏋️</p>
+        </div>
+    </div>
 
-                <div class="page-container" id="workout-page">
-                    <div class="subpage-header">
-                        <button class="back-button" onclick="location.reload()">← 返回首页</button>
-                        <div class="subpage-content">
-                            <h1>Workout Log</h1>
-                            <p>记录每一次的组数、次数与重量，见证进步轨迹</p>
-                        </div>
-                    </div>
-                    <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
-                        <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载训练记录... 📊</p>
-                    </div>
-                </div>
+    <div class="page-container" id="workout-page">
+        <div class="subpage-header">
+            <button class="back-button" onclick="location.reload()">← 返回首页</button>
+            <div class="subpage-content">
+                <h1>Workout Log</h1>
+                <p>记录每一次的组数、次数与重量，见证进步轨迹</p>
+            </div>
+        </div>
+        <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
+            <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载训练记录... 📊</p>
+        </div>
+    </div>
 
-                <div class="page-container" id="lesson-page">
-                    <div class="subpage-header">
-                        <button class="back-button" onclick="location.reload()">← 返回首页</button>
-                        <div class="subpage-content">
-                            <h1>Daily Lesson</h1>
-                            <p>探索"为什么"的科学，每日精选健身知识</p>
-                        </div>
-                    </div>
-                    <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
-                        <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载每日课程... 📚</p>
-                    </div>
-                </div>
+    <div class="page-container" id="lesson-page">
+        <div class="subpage-header">
+            <button class="back-button" onclick="location.reload()">← 返回首页</button>
+            <div class="subpage-content">
+                <h1>Daily Lesson</h1>
+                <p>探索"为什么"的科学，每日精选健身知识</p>
+            </div>
+        </div>
+        <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
+            <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载每日课程... 📚</p>
+        </div>
+    </div>
 
-                <div class="page-container" id="scent-page">
-                    <div class="subpage-header">
-                        <button class="back-button" onclick="location.reload()">← 返回首页</button>
-                        <div class="subpage-content">
-                            <h1>Scent & Soul</h1>
-                            <p>探索气味如何唤醒意识，转化日常为仪式感</p>
-                        </div>
-                    </div>
-                    <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
-                        <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载香氛体验... 🌸</p>
-                    </div>
-                </div>
+    <div class="page-container" id="scent-page">
+        <div class="subpage-header">
+            <button class="back-button" onclick="location.reload()">← 返回首页</button>
+            <div class="subpage-content">
+                <h1>Scent & Soul</h1>
+                <p>探索气味如何唤醒意识，转化日常为仪式感</p>
+            </div>
+        </div>
+        <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
+            <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载香氛体验... 🌸</p>
+        </div>
+    </div>
 
-                <div class="page-container" id="recipe-page">
-                    <div class="subpage-header">
-                        <button class="back-button" onclick="location.reload()">← 返回首页</button>
-                        <div class="subpage-content">
-                            <h1>Recipes</h1>
-                            <p>简单美味的营养餐，为身体和健康科学供能</p>
-                        </div>
-                    </div>
-                    <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
-                        <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载食谱... 🍽️</p>
-                    </div>
-                </div>
+    <div class="page-container" id="recipe-page">
+        <div class="subpage-header">
+            <button class="back-button" onclick="location.reload()">← 返回首页</button>
+            <div class="subpage-content">
+                <h1>Recipes</h1>
+                <p>简单美味的营养餐，为身体和健康科学供能</p>
+            </div>
+        </div>
+        <div style="padding: 4rem 2rem; text-align: center; background: var(--color-bg-primary);">
+            <p style="font-family: var(--font-elegant); font-size: 1.5rem; color: var(--color-text-secondary);">正在加载食谱... 🍽️</p>
+        </div>
+    </div>
 
     <script>
-        // 页面切换
         function showPage(pageName) {
             document.querySelectorAll('.page-container').forEach(page => {
                 page.classList.remove('active');
@@ -910,7 +860,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 导航栏滚动效果
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
@@ -918,6 +867,19 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // 页面加载时检查图片
+        window.addEventListener('load', function() {
+            console.log('=== 图片加载检测 ===');
+            const images = document.querySelectorAll('.service-image img');
+            images.forEach((img, index) => {
+                if (img.complete && img.naturalHeight !== 0) {
+                    console.log(`✅ 图片 ${index + 1} 加载成功:`, img.src);
+                } else {
+                    console.log(`❌ 图片 ${index + 1} 加载失败:`, img.src);
+                }
+            });
         });
     </script>
 </body>
