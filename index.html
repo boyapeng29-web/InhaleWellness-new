@@ -460,6 +460,8 @@
             transition: all var(--transition);
             position: relative;
             overflow: hidden;
+            background: transparent;
+            cursor: pointer;
         }
 
         .service-link::before {
@@ -697,83 +699,83 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card" onclick="showPage('movement')">
-                    <div class="service-image has-image">
+                <div class="service-card">
+                    <div class="service-image has-image" onclick="showPage('movement')" style="cursor: pointer;">
                         <img src="./images/movement.jpg" alt="Movement Library" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
-                        <div>
+                        <div onclick="showPage('movement')" style="cursor: pointer;">
                             <h3>Movement Library</h3>
                             <p class="service-subtitle">运动库</p>
                             <p class="service-description">
                                 按部位浏览训练动作，掌握正确姿势与力量技巧，构建科学的训练体系
                             </p>
                         </div>
-                        <a href="#" class="service-link" onclick="event.preventDefault(); showPage('movement')">探索更多</a>
+                        <button class="service-link" onclick="showPage('movement')" type="button">探索更多</button>
                     </div>
                 </div>
 
-                <div class="service-card" onclick="showPage('workout')">
-                    <div class="service-image has-image">
+                <div class="service-card">
+                    <div class="service-image has-image" onclick="showPage('workout')" style="cursor: pointer;">
                         <img src="./images/workout.jpg" alt="Workout Log" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
-                        <div>
+                        <div onclick="showPage('workout')" style="cursor: pointer;">
                             <h3>Workout Log</h3>
                             <p class="service-subtitle">训练记录</p>
                             <p class="service-description">
                                 记录每一次的组数、次数与重量，见证进步轨迹，数据驱动你的成长
                             </p>
                         </div>
-                        <a href="#" class="service-link" onclick="event.preventDefault(); showPage('workout')">探索更多</a>
+                        <button class="service-link" onclick="showPage('workout')" type="button">探索更多</button>
                     </div>
                 </div>
 
-                <div class="service-card" onclick="showPage('lesson')">
-                    <div class="service-image has-image">
+                <div class="service-card">
+                    <div class="service-image has-image" onclick="showPage('lesson')" style="cursor: pointer;">
                         <img src="./images/lesson.jpg" alt="Daily Lesson" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
-                        <div>
+                        <div onclick="showPage('lesson')" style="cursor: pointer;">
                             <h3>Daily Lesson</h3>
                             <p class="service-subtitle">每日课程</p>
                             <p class="service-description">
                                 探索"为什么"的科学，每日精选健身知识，深入理解身体的奥秘
                             </p>
                         </div>
-                        <a href="#" class="service-link" onclick="event.preventDefault(); showPage('lesson')">探索更多</a>
+                        <button class="service-link" onclick="showPage('lesson')" type="button">探索更多</button>
                     </div>
                 </div>
 
-                <div class="service-card" onclick="showPage('scent')">
-                    <div class="service-image has-image">
+                <div class="service-card">
+                    <div class="service-image has-image" onclick="showPage('scent')" style="cursor: pointer;">
                         <img src="./images/scent.jpg" alt="Scent & Soul" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
-                        <div>
+                        <div onclick="showPage('scent')" style="cursor: pointer;">
                             <h3>Scent & Soul</h3>
                             <p class="service-subtitle">香氛</p>
                             <p class="service-description">
                                 探索气味如何唤醒意识，转化日常为仪式感，连接身心的芳香之旅
                             </p>
                         </div>
-                        <a href="#" class="service-link" onclick="event.preventDefault(); showPage('scent')">探索更多</a>
+                        <button class="service-link" onclick="showPage('scent')" type="button">探索更多</button>
                     </div>
                 </div>
 
-                <div class="service-card" onclick="showPage('recipe')">
-                    <div class="service-image has-image">
+                <div class="service-card">
+                    <div class="service-image has-image" onclick="showPage('recipe')" style="cursor: pointer;">
                         <img src="./images/recipe.jpg" alt="Recipes" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
                     </div>
                     <div class="service-content">
-                        <div>
+                        <div onclick="showPage('recipe')" style="cursor: pointer;">
                             <h3>Recipes</h3>
                             <p class="service-subtitle">食谱</p>
                             <p class="service-description">
                                 简单美味的营养餐，为身体和健康科学供能，享受美食与健康的平衡
                             </p>
                         </div>
-                        <a href="#" class="service-link" onclick="event.preventDefault(); showPage('recipe')">探索更多</a>
+                        <button class="service-link" onclick="showPage('recipe')" type="button">探索更多</button>
                     </div>
                 </div>
             </div>
